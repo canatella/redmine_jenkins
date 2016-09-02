@@ -26,7 +26,6 @@ class JenkinsClient
     test[:errors] = []
 
     begin
-#      test[:jobs_count] = connection.job.list_all.size
       test[:jobs_count] = get_available_jobs.size
     rescue => e
       test[:jobs_count] = 0
