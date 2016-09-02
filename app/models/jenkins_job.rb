@@ -33,6 +33,7 @@ class JenkinsJob < ActiveRecord::Base
 
   def url
     "#{jenkins_url}/job/#{name}"
+    # "#{jenkins_url}/job/" + name.gsub(/\//, '\/job\/')
   end
 
 
